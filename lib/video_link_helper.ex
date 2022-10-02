@@ -2,8 +2,15 @@ defmodule VideoLinkHelper do
   @youtube_regex ~r{^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*}
   @vimeo_regex ~r{(?:http:|https:|)\/\/(?:player.|www.)?vimeo\.com\/(?:video\/|embed\/|watch\?\S*v=|v\/)?(\d*)}
 
-  def extract_id(nil), do: nil
+  @doc """
+  Extracts an ID from a link and identifies it as either a Youtube or Vimeo link.
 
+  ## Examples
+      iex> VideoLinkHelper.extract_id("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      {:youtube, "dQw4w9WgXcQ"}
+
+  """
+  def extract_id(nil), do: nil
   def extract_id(url) do
     cond do
       url =~ @youtube_regex ->
