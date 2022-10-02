@@ -1,5 +1,7 @@
 # VideoLinkHelper
 
+[![Actions Status](https://github.com/bratsche/video_link_helper/workflows/elixir/badge.svg)](https://github.com/bratsche/video_link_helper/actions?query=workflow%3Aelixir)
+
 This is a simple library to help deal with embedded video links. It
 allows you to extract the ID from a video link, and can use that ID
 to generate an iframe to embed the video into a web application.
