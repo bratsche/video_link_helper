@@ -1,4 +1,10 @@
 defmodule VideoLinkHelper do
+  @moduledoc """
+  A helper for extracting IDs from video (Youtube or Vimeo) URLs and
+  rendering embeds for those IDs.
+
+  """
+
   @youtube_regex ~r{^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*}
   @vimeo_regex ~r{(?:http:|https:|)\/\/(?:player.|www.)?vimeo\.com\/(?:video\/|embed\/|watch\?\S*v=|v\/)?(\d*)}
 
