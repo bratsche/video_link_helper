@@ -6,7 +6,7 @@ defmodule VideoLinkHelper do
   Extracts an ID from a link and identifies it as either a Youtube or Vimeo link.
 
   ## Examples
-      iex> extract_id("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+      iex> VideoLinkHelper.extract_id("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
       {:youtube, "dQw4w9WgXcQ"}
 
   """
