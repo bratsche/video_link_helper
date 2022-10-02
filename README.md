@@ -53,7 +53,7 @@ import VideoLinkHelper.VideoComponent
 
  - Using the raw HTML function:
  ```elixir
-raw(VideoLinkHelper.create_youtube_embed("dQw4w9WgXcQ", 315, 560))
+raw(VideoLinkHelper.render_embed("dQw4w9WgXcQ", width: 560, height: 315))
  ```
 
 ## License

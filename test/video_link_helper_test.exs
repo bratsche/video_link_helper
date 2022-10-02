@@ -49,4 +49,27 @@ defmodule VideoLinkHelperTest do
                end)
     end
   end
+
+  describe "rendering embeds" do
+    test "default youtube embed" do
+      assert VideoLinkHelper.render_embed("dQw4w9WgXcQ") ==
+               """
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border: none;" allowfullscreen></iframe>
+               """
+    end
+
+    test "embed with custom sizes" do
+      assert VideoLinkHelper.render_embed("dQw4w9WgXcQ", width: 640, height: 480) ==
+               """
+               <iframe width="640" height="480" src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border: none;" allowfullscreen></iframe>
+               """
+    end
+
+    test "vimeo embed" do
+      assert VideoLinkHelper.render_embed("148751763", video_type: :vimeo) ==
+               """
+               <iframe width="560" height="315" src="https://player.vimeo.com/video/148751763" style="border: none;" allowfullscreen></iframe>
+               """
+    end
+  end
 end
