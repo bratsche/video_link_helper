@@ -1,10 +1,10 @@
 defmodule VideoLinkHelper.VideoComponent do
   use Phoenix.Component
 
-  attr :id, :string, required: true
-  attr :video_type, :string, default: "youtube"
-  attr :width, :integer, required: true
-  attr :height, :integer, required: true
+  attr(:id, :string, required: true)
+  attr(:video_type, :string, default: "youtube")
+  attr(:width, :integer, required: true)
+  attr(:height, :integer, required: true)
 
   def video(assigns) do
     ~H"""

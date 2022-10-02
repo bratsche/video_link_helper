@@ -7,7 +7,8 @@ defmodule VideoLinkHelperTest do
       "http://www.youtube.com/v/0zM3nApSvMg?fs=1&hl=en_US&rel=0",
       "http://www.youtube.com/embed/0zM3nApSvMg?rel=0",
       "http://www.youtube.com/watch?v=0zM3nApSvMg&feature=feedrec_grec_index",
-      "http://www.youtube.com/watch?v=0zM3nApSvMg", "http://youtu.be/0zM3nApSvMg",
+      "http://www.youtube.com/watch?v=0zM3nApSvMg",
+      "http://youtu.be/0zM3nApSvMg",
       "http://www.youtube.com/watch?v=0zM3nApSvMg#t=0m10s",
       "http://youtu.be/0zM3nApSvMg",
       "http://www.youtube.com/embed/0zM3nApSvMg",
@@ -31,9 +32,10 @@ defmodule VideoLinkHelperTest do
         @youtube_links
         |> Enum.map(fn url -> VideoLinkHelper.extract_id(url) end)
 
-      assert true == Enum.all?(ids, fn x ->
-        x == {:youtube, "0zM3nApSvMg"}
-      end)
+      assert true ==
+               Enum.all?(ids, fn x ->
+                 x == {:youtube, "0zM3nApSvMg"}
+               end)
     end
 
     test "vimeo links" do
@@ -41,9 +43,10 @@ defmodule VideoLinkHelperTest do
         @vimeo_links
         |> Enum.map(fn url -> VideoLinkHelper.extract_id(url) end)
 
-      assert true == Enum.all?(ids, fn x ->
-        x == {:vimeo, "148751763"}
-      end)
+      assert true ==
+               Enum.all?(ids, fn x ->
+                 x == {:vimeo, "148751763"}
+               end)
     end
   end
 end

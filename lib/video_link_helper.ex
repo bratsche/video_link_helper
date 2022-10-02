@@ -11,6 +11,7 @@ defmodule VideoLinkHelper do
 
   """
   def extract_id(nil), do: nil
+
   def extract_id(url) do
     cond do
       url =~ @youtube_regex ->
