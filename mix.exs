@@ -12,22 +12,31 @@ defmodule VideoLinkHelper.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      docs: docs(),
       package: package(),
       source_url: "https://github.com/bratsche/video_link_helper"
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     []
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:jason, "~> 1.0"},
       {:phoenix_live_view, "~> 0.18"}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "VideoLinkHelper",
+      source_ref: "v#{@version}",
+      source_url: "https://github.com/bratsche/video_link_helper",
+      extras: ["CHANGELOG.md"],
+      skip_undefined_reference_warnings_on: ["CHANGELOG.md"]
     ]
   end
 
