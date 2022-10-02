@@ -10,13 +10,13 @@ This library supports Youtube and Vimeo links.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `video_link_helper` to your list of dependencies in `mix.exs`:
+This package can be installed by adding `video_link_helper` to your
+list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:video_link_helper, "~> 0.1.0"}
+    {:video_link_helper, "~> 0.2.0"}
   ]
 end
 ```
