@@ -46,7 +46,6 @@ A video can be embedded on a page in one of two ways:
 ```elixir
 import VideoLinkHelper.VideoComponent
 
-
 ~H"""
 <.video id="dQw4w9WgXcQ" video_type="youtube" width="560" height="315" />
 """
