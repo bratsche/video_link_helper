@@ -1,7 +1,7 @@
 defmodule VideoLinkHelper.MixProject do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "0.3.0"
   @description "Elixir utility library for dealing with embedded Youtube and Vimeo videos"
 
   def project do
@@ -26,7 +26,7 @@ defmodule VideoLinkHelper.MixProject do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:jason, "~> 1.0"},
-      {:phoenix_live_view, "~> 0.18"}
+      {:phoenix_live_view, "~> 1.0"}
     ]
   end
 
