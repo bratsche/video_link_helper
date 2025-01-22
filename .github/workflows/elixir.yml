@@ -21,9 +21,9 @@ jobs:
         otp: [27.0.1]
     steps:
      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+       uses: actions/checkout@v2
+       with:
+         fetch-depth: 0
 
       - name: Setup
         uses: erlef/setup-beam@v1
