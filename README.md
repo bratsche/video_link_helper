@@ -16,7 +16,7 @@ list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:video_link_helper, "~> 0.2.0"}
+    {:video_link_helper, "~> 0.3.0"}
   ]
 end
 ```

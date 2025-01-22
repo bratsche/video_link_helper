@@ -11,21 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        elixir: [1.14]
-        otp: [25.0]
+        elixir: [1.18.0]
+        otp: [27.0.1]
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.6.0
-        with:
-          access_token: ${{ github.token }}
-
-      - name: Checkout
+     - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Setup
-        uses: actions/setup-elixir@v1
+        uses: erlef/setup-beam@v1
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
@@ -58,18 +53,13 @@ jobs:
         elixir: [1.14]
         otp: [25.0]
     steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.6.0
-        with:
-          access_token: ${{ github.token }}
-
-      - name: Checkout
+     - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Setup
-        uses: actions/setup-elixir@v1
+        uses: erlef/setup-beam@v1
         with:
           elixir-version: ${{ matrix.elixir }}
           otp-version: ${{ matrix.otp }}
