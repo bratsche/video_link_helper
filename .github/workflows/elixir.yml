@@ -2,6 +2,12 @@ name: CI
 
 on: push
 
+permissions: read-all
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 env:
   MIX_ENV: test
 
